@@ -20,13 +20,15 @@ Route::get('/', function () {
 Auth::routes(['verify'=>true]);
 
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
-
 Route::get('/dashboard',function(){
   return 'dashboard';
 });
-Route::get('/redirect/{service}','SocialiteController@redirect');
 
-Route::get('/callback/{service}','SocialiteController@callback');
+Route::get('login/{provider}', 'Auth\SocialAccountController@redirectToProvider');
+Route::get('login/{provider}/callback', 'Auth\SocialAccountController@handleProviderCallback');
+
+
+
 
 
 
