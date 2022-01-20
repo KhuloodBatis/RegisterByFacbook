@@ -81,7 +81,8 @@
                                 </button>
                             </div>
                              <div class="col-md-4 ">
-                                    <a href ="{{url('redirect/facebook')}}">Login with Facebook</a>
+
+
                               </div>
                         </div>
                     </form>
